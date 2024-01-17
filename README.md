@@ -149,28 +149,54 @@ and provide your personal access token when requested. The personal access token
   ```
   #### Fix:
   Run the commands:
-     ```
+  
+     
         sudo gem uninstall jazzy --all --executables
-        sudo gem uninstall cocoapods --all --executables
-        sudo gem uninstall cocoapods-core --all --executables
-        sudo gem uninstall cocoapods-downloader --all --executables
         
+        sudo gem uninstall cocoapods --all --executables
+        
+        sudo gem uninstall cocoapods-core --all --executables
+        
+        sudo gem uninstall cocoapods-downloader --all --executables
+      
+     
+  Then the commands:
+  
+     
         sudo gem install cocoapods-core -v 1.12.1
+        
         sudo gem install cocoapods -v 1.12.1
+        
         sudo gem install cocoapods-downloader -v 1.6.3
+        
         sudo gem install jazzy
+        
         sudo gem install cocoapods-azure-universal-packages 
-     ```
+        
+    
   
   #### Error:
   ```
-    Error: Failed to replace env in config: {NPM_USER}
+    Cloning spec repo `navicogroup-engage-ios-podspecs-1` from `https://github.com/NavicoGroup/engage-ios-podspecs`
+    [!] Unable to add a source with url `https://github.com/NavicoGroup/engage-ios-podspecs` named `navicogroup-engage-ios-podspecs-1`.
+    You can try adding it manually in `/Users/akhoukhi/.cocoapods/repos` or via `pod repo add`.
   ```
   #### Fix:
-  Run the command:
-     ```
-       source ~/.bash_profile
-     ```
+  Try adding manually:
+  
+     
+       pod repo add navicogroup-engage-ios-podspecs git@github.com:NavicoGroup/engage-ios-podspecs.git
+     
+     
+  If that doesn't work, navigate to the  `Podfile`:
+  - Replace
+    ```  
+      source 'https://github.com/NavicoGroup/engage-ios-podspecs'
+    ```
+- With
+    ```
+      source 'git@github.com:NavicoGroup/engage-ios-podspecs.git'
+    ```
 
 
   
