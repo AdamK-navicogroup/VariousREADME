@@ -209,12 +209,19 @@ and provide your personal access token when requested. The personal access token
   ```
   #### Fix:
   Install and use Rosetta
-    1. In Finder, navigate to the  `Terminal` Application
-    2. Right-Click the application and click on `Get Info`
-    3. Inside the General category, check the `Open using Rosetta` option
-    4. Open a new Terminal
-    5. Run the commands:
-       ```
+    <br/>
+    
+  1. In Finder, navigate to the  `Terminal` Application
+  
+  2. Right-Click the application and click on `Get Info`
+
+  3. Inside the General category, check the `Open using Rosetta` option
+  
+  4. Open a new Terminal
+  
+  5. Run the commands:
+    
+     ```  
        sudo gem uninstall cocoapods --all --executables
 
        sudo gem install cocoapods -v 1.12.1
@@ -222,7 +229,8 @@ and provide your personal access token when requested. The personal access token
        softwareupdate --install-rosetta
 
        pod install
-       ```
+     ```
+       
  
 
 
