@@ -193,7 +193,7 @@ and provide your personal access token when requested. The personal access token
     ```  
       source 'https://github.com/NavicoGroup/engage-ios-podspecs'
     ```
-- With
+  - With
     ```
       source 'git@github.com:NavicoGroup/engage-ios-podspecs.git'
     ```
