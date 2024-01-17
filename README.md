@@ -1,27 +1,21 @@
 # VariousREADME
 
-# Engage-Core-App Set Up Guide:
+# Engage-Core-App Set Up Guide (iOS M1):
 
 ## 1. Install VSC and Node:
-  Node: https://nodejs.org/en/download/ 
-  <br/>
-  VSC: https://code.visualstudio.com/download
+  - Node: https://nodejs.org/en/download/ 
+  - VSC: https://code.visualstudio.com/download
 ### Install NVM (recommended):
-  Link to install: https://github.com/nvm-sh/nvm#install--update-script
-  <br/>
-  Note: Incase npm-related issues arise, utilize nvm to downgrade to node v18.8.0
-  <br/>
-  <br/>
-  Commands:
+  - Link to install: https://github.com/nvm-sh/nvm#install--update-script
+  - Note: Incase npm-related issues arise, utilize nvm to downgrade to node v18.8.0
   ```
     nvm install 18.8.0
     nvm use 18.8.0
     node --version
   ```
 ## 2. Clone repo
-  Repo link: https://github.com/NavicoGroup/engage-core-app
-  <br/>
-  You can clone using HTTPS or SSH (recommended):
+  - Repo link: https://github.com/NavicoGroup/engage-core-app
+  - You can clone using HTTPS or SSH (recommended):
     Good guide for cloning using SSH: https://phoenixnap.com/kb/git-clone-ssh
 ## 3. Azure DevOps Personal Token:
   Navigate to Azure Devops: https://dev.azure.com/bconline
@@ -121,8 +115,50 @@
   ```
   NODE_TLS_REJECT_UNAUTHORIZED=0 yarn
   ```
-### 6. Pod install
+### 6. BLE setup
+  - Install the Azure CLI by executing the following command:
+<code>brew update && brew install azure-cli</code>.
+
+  - Login with Azure CLI by executig the following commands:
+    - <code>az login</code> and complete the authentication process
+    - <code>az devOps login --organization https://dev.azure.com/bconline</code>
+and provide your personal access token when requested. The personal access token is the NPM token(Without encoding base64).
+
+  - Install azure universal package using `gem install 'cocoapods-azure-universal-packages'`
+  - Execute the command <code>pod install</code>.
   Once yarn is complete, navigate to the `ios` folder and execute the command `pod install`
+  ### Troubleshooting
+  #### Error:
+  ```
+    zsh: command not found: pod
+  ```
+  #### Fix:
+  Install pod
+     ```
+          sudo gem install cocoapods
+      ```
+ 
+  #### Error:
+  ```
+    Error: Failed to replace env in config: {NPM_USER}
+  ```
+  #### Fix:
+  Run the command:
+     ```
+       source ~/.bash_profile
+     ```
+  
+  #### Error:
+  ```
+    Error: Failed to replace env in config: {NPM_USER}
+  ```
+  #### Fix:
+  Run the command:
+     ```
+       source ~/.bash_profile
+     ```
+
+
   
   
   
