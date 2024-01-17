@@ -256,6 +256,9 @@ and provide your personal access token when requested. The personal access token
   5. NOTE: Even if you're seeing Command Line Tools dropdown being selected with proper version, you might want to re-select it again.
   6. To know if successful, the light text underneath the Command Line Tools dropdown should say `/Applications/Xcode.app`
 
+
+## Congratulations! You are all set up!
+
  
        
  
