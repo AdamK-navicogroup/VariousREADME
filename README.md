@@ -39,9 +39,10 @@
 ## 4. Set up the Enviroment Variables
   You will need to set up two enviroment variables: Good guide on env vars (https://phoenixnap.com/kb/set-environment-variable-mac)
   <br/>
-  NPM_USER=(The username part of your email addres (i.e. Adam.Khoukhi@navicogroup.com -> Adam.Khoukhi)
   <br/>
-  NPM_PASS=(The encoded PAT generated previously)
+NPM_USER=(The username part of your email addres (i.e. Adam.Khoukhi@navicogroup.com -> Adam.Khoukhi)
+<br/><br/>
+NPM_PASS=(The encoded PAT generated previously)
   <br/><br/>
   To know if you have successfully added the env vars:
   <br/>
@@ -140,12 +141,25 @@ and provide your personal access token when requested. The personal access token
  
   #### Error:
   ```
-    Error: Failed to replace env in config: {NPM_USER}
+    Error loading plugin file  '/Library/Ruby/Gems/2.6.0/gems/cocoapods-azure-universal-packages-0.1.0/lib/cocoapods_plugin.rb'.
+
+    Gem::ConflictError - Unable to activate cocoapods-azure-universal-packages-0.1.0, because cocoapods-downloader-2.0 conflicts with cocoapods-downloader (~> 1.0)
+
+    Your Podfile requires that the plugin 'cocoapods-azure-universal-packages' be installed. Please install it and try installation again.
   ```
   #### Fix:
-  Run the command:
+  Run the commands:
      ```
-       source ~/.bash_profile
+        sudo gem uninstall jazzy --all --executables
+        sudo gem uninstall cocoapods --all --executables
+        sudo gem uninstall cocoapods-core --all --executables
+        sudo gem uninstall cocoapods-downloader --all --executables
+        
+        sudo gem install cocoapods-core -v 1.12.1
+        sudo gem install cocoapods -v 1.12.1
+        sudo gem install cocoapods-downloader -v 1.6.3
+        sudo gem install jazzy
+        sudo gem install cocoapods-azure-universal-packages 
      ```
   
   #### Error:
