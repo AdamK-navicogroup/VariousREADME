@@ -231,6 +231,34 @@ and provide your personal access token when requested. The personal access token
        pod install
      
      ```
+  #### Error:
+  ```
+    Installing glog (0.3.5)
+    [!] /bin/bash -c 
+    set -e
+    #!/bin/bash
+    ...
+
+    checking whether the C compiler works... no
+    xcrun: error: SDK "iphoneos" cannot be located
+    xcrun: error: SDK "iphoneos" cannot be located
+    xcrun: error: SDK "iphoneos" cannot be located
+    xcrun: error: unable to lookup item 'Path' in SDK 'iphoneos'
+    ...
+
+    configure: error: C compiler cannot create executables
+    See `config.log' for more details
+    
+  ```
+  #### Fix:
+  1. Launch XCode
+  2. On the top bar, click on `XCode` then `Settings`
+  3. Navigate to `Locations`
+  4. Make sure there's a dropdown option selected for the command line tools
+  5. NOTE: Even if you're seeing Command Line Tools dropdown being selected with proper version, you might want to re-select it again.
+  6. To know if successful, the light text underneath the Command Line Tools dropdown should say `/Applications/Xcode.app`
+
+ 
        
  
 
