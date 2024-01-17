@@ -198,6 +198,33 @@ and provide your personal access token when requested. The personal access token
       source 'git@github.com:NavicoGroup/engage-ios-podspecs.git'
     ```
 
+  #### Error:
+  ```
+    [!] Error installing EngageBleCore
+    [!] /opt/homebrew/bin/az artifacts universal download --organization https://dev.azure.com/bconline --feed MobileAppDevelopment --name engage-ios-ble-core --version 0.0.27 --path /var/folders/g7/k20kctg9615c9ynpz30p9k500000gn/T/d20240117-22914-2znfjr --project ASG --scope project
+    ...
+  
+    OSError: [Errno 86] Bad CPU type in executable: '/Users/akhoukhi/.azure/azuredevops/cli/tools/artifacttool/ArtifactTool_osx-x64_0.2.300/artifacttool'
+    To check existing issues, please visit: https://github.com/Azure/azure-cli/issues
+  ```
+  #### Fix:
+  Install and use Rosetta
+    1. In Finder, navigate to the  `Terminal` Application
+    2. Right-Click the application and click on `Get Info`
+    3. Inside the General category, check the `Open using Rosetta` option
+    4. Open a new Terminal
+    5. Run the commands:
+       ```
+       sudo gem uninstall cocoapods --all --executables
+
+       sudo gem install cocoapods -v 1.12.1
+
+       softwareupdate --install-rosetta
+
+       pod install
+       ```
+ 
+
 
   
   
