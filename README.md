@@ -1,5 +1,3 @@
-# VariousREADME
-
 # Engage-Core-App Set Up Guide (iOS M1):
 
 ## 1. Install VSC and Node:
