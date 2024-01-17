@@ -116,7 +116,7 @@ NPM_PASS=(The encoded PAT generated previously)
   ```
   NODE_TLS_REJECT_UNAUTHORIZED=0 yarn
   ```
-### 6. BLE setup
+## 6. BLE setup
   - Install the Azure CLI by executing the following command:
 <code>brew update && brew install azure-cli</code>.
 
