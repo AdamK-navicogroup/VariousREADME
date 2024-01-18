@@ -269,8 +269,31 @@ and provide your personal access token when requested. The personal access token
 ### Note:
   If you are a Mac user (Apple Silicon), and the build fails with a Linker error:
   1. Open XCode
-  2. 
+  2. Inside the Pods `xcodeproj`, add `arm64` to the `Excluded Architectures`
+     ![plot](./ECAImages/PodArm64.png)
+  3. Once done, re-run the commands below
+    ```
+    yarn
 
+    cd ios
+    
+    pod install
+    
+    cd ..
+    
+    npx react-native run-ios
+
+### Note:
+  If your login fails with an API error or something as shown below:
+  ```
+  [CodePush] Network request failed
+
+
+  2024-01-18T14:41:20.814Z | REALM | ERROR | Could not login api-key based Realm user AppError: Network request failed {"name":"AppError","logs":"","code":"CustomError"}
+
+  ```
+  Then try turning off `GlobalProtect` and `ZScaler` to fix it.
+  
  
        
  
