@@ -1,8 +1,9 @@
 # Engage-Core-App Set Up Guide (iOS M1):
 
-## 1. Install VSC and Node:
+## 1. Install XCode, VSC and Node:
   - Node: https://nodejs.org/en/download/ 
   - VSC: https://code.visualstudio.com/download
+  - XCode: From the App Store
 ### Install NVM (recommended):
   - Link to install: https://github.com/nvm-sh/nvm#install--update-script
   - Note: Incase npm-related issues arise, utilize nvm to downgrade to node v18.8.0
@@ -258,6 +259,17 @@ and provide your personal access token when requested. The personal access token
 
 
 ## Congratulations! You are all set up!
+
+## To run the App:
+
+1. Run the command:
+   ```
+   npx react-native run-ios
+   ```
+### Note:
+  If you are a Mac user (Apple Silicon), and the build fails with a Linker error:
+  1. Open XCode
+  2. 
 
  
        
