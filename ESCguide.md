@@ -21,7 +21,13 @@
     Good guide for cloning using SSH: https://phoenixnap.com/kb/git-clone-ssh
 
 ## 4. Set up the backend:
+  - Download `navico-backend-setup.zip` found in this directory and move it to your `documents` folder.
+  - Extract and open the folder on VSC.
+  - Inside you will find a text file named `convert2dotenv.txt`. In the same directory as the text file, create a `.env` file and copy the content's of `convert2dotenv.txt` to that env file. 
 
+## 5. Set up Empower-service-policy:
+  - Download
+  - Inside the `empower-service-policy` you cloned earlier, add the
 
 
 ## 4. Set up the Enviroment Variables
