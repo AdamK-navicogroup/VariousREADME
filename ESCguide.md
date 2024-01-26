@@ -26,8 +26,15 @@
   - Inside you will find a text file named `convert2dotenv.txt`. In the same directory as the text file, create a `.env` file and copy the content's of `convert2dotenv.txt` to that env file. 
 
 ## 5. Set up Empower-service-policy:
-  - Download
-  - Inside the `empower-service-policy` you cloned earlier, add the
+  - Download `Dockerfile.local` found in this directory.
+  - Inside the `empower-service-policy` you cloned earlier, add the `Dockerfile.local` file in the outermost directory (same directory as the `Dockerfile` and `package.json`)
+
+## 6. Create and start containers:
+  - Open back your `navico-backend-setup` on VSC
+  - Open a new terminal and run the command:
+    ```
+    docker-compose up -d --build
+    ```
 
 
 ## 4. Set up the Enviroment Variables
