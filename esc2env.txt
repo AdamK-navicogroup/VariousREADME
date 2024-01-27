@@ -1,0 +1,180 @@
+###################################################
+#    HTTP Server
+###################################################
+BIND_ADDRESS="0.0.0.0"
+PORT=8123
+
+###################################################
+#    Logging
+###################################################
+LOG_LEVEL="verbose"
+
+###################################################
+#    Policy Agent
+###################################################
+POLICY_AGENT_MODE="disabled"
+POLICY_AGENT_PATH="/v1/data/empower/iot/api/authz"
+
+###################################################
+#    Database Connection Strings
+###################################################
+TRIPS_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/trips?authSource=admin"
+
+IOT_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/iot?authSource=admin"
+
+USER_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/iot?authSource=admin"
+
+FACTORY_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/factory?authSource=admin"
+
+CRM_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/crm?authSource=admin"
+
+###################################################
+#    Database Connection Strings DEV
+###################################################
+# IOT_DB_CONNECTION_STRING="mongodb+srv://dev-empower-service:T4aaJydaUHc2686A@dev.lxinj.mongodb.net/empower?retryWrites=true&w=majority"
+
+# FACTORY_DB_CONNECTION_STRING="mongodb+srv://dev-empower-service-factory:FilEARscLtYI80wb@dev.lxinj.mongodb.net/empower-factory?retryWrites=true&w=majority"
+
+# USER_DB_CONNECTION_STRING="mongodb+srv://dev-empower-service:T4aaJydaUHc2686A@dev.lxinj.mongodb.net/empower?retryWrites=true&w=majority"
+
+# TRIPS_DB_CONNECTION_STRING="mongodb+srv://dev-empower-service-trips:RS2U699UbUs3qKCC@devsineurope.lxinj.mongodb.net/engage?retryWrites=true&w=majority"
+
+# CRM_DB_CONNECTION_STRING="mongodb+srv://dev-empower-service-crm:lhQHTmJKmjiVMRFj@dev.lxinj.mongodb.net/empower-crm"
+
+###################################################
+#    Database Connection Strings QA
+###################################################
+# IOT_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service:Pxyo2yMuvrikHWDJ@empower-qa.lxinj.mongodb.net/empower-iot?retryWrites=true&w=majority"
+
+# FACTORY_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service-factory:Xptkv05nLveciJCM@empower-qa.lxinj.mongodb.net/empower-factory?retryWrites=true&w=majority"
+
+# USER_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service:Pxyo2yMuvrikHWDJ@empower-qa.lxinj.mongodb.net/empower-iot?retryWrites=true&w=majority"
+
+# TRIPS_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service-trips:85W2WItvEv6wPJbY@qa.lxinj.gcp.mongodb.net/engage?retryWrites=true&w=majority"
+
+# CRM_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service-crm:CSt8JnOvqjkWt2fX@empower-qa.lxinj.mongodb.net/empower-crm?retryWrites=true&w=majority"
+
+###################################################
+#    OpenTelemetry
+###################################################
+TELEMETRY_ENABLED="false"
+TELEMETRY_CONNECTION_STRING=""
+TELEMETRY_APP_NAME="empower-service-core"
+
+###################################################
+#    IOT Hub
+###################################################
+IOT_HUB_CONNECTION_STRING=HostName=IOT-ASG-APP5371-N-CUS01.azure-devices.net;SharedAccessKeyName=empower-service;SharedAccessKey=OZ7XJorE2MFt0FHqbq8zpUfV4AHu1Op0sBJakK1qMBU=
+
+###################################################
+#    IOT Hub QA
+###################################################
+# IOT_HUB_CONNECTION_STRING=HostName=IOT-ASG-APP5767-N-CUS01.azure-devices.net;SharedAccessKeyName=empower-service;SharedAccessKey=8zO0sfQuQivCrg6dUV0Cos11w3Jfqe53CNKFAmtGOtI=
+
+
+###################################################
+#    EventHub Consumers
+###################################################
+EVH_CONNECTION_STRING="Endpoint=sb://ehns-asg-app5371-n-cus01.servicebus.windows.net/;SharedAccessKeyName=empowerListen;SharedAccessKey=H0f4shIXQdCSGK09OrYDZvjKOCXpyDXOt1LgHgzMksk="
+
+EUROPA_CONSUMER_DEVICEID_FILTER="rahul-sim-sandbox"
+
+EVH_EUROPA_TELEMETRY_CONSUMER_GROUP="rahul-dev"
+EVH_EUROPA_CONNECTIVITY_CONSUMER_GROUP="rahul-dev"
+EVH_EUROPA_TWINCHANGES_CONSUMER_GROUP="rahul-dev"
+EVH_EUROPA_CONSUMER_GROUP="rahul-dev"
+
+EVH_EUROPA_CONSUMER_MAX_BATCH_SIZE="25"
+EVH_EUROPA_CONSUMER_MAX_WAIT_TIME_SECONDS="1"
+
+EVH_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=saasgapp5371ncus01240c;AccountKey=JxiRJHH4jxqIW+RkApjMr5VEtI3n2cEsooVVy3F+J0oclpE7duIPlSgXDnt40WcrTw7xk/qJ/QDN+AStQZBHkg==;EndpointSuffix=core.windows.net"
+EVH_STORAGE_CONTAINER_NAME="event-hub-checkpoints"
+
+###################################################
+#    EventHub Consumers QA
+###################################################
+# EVH_CONNECTION_STRING="Endpoint=sb://ehns-asg-app5767-n-cus01.servicebus.windows.net/;SharedAccessKeyName=empowerListen;SharedAccessKey=/MTUeYo5iGvqTD52AKjjAcM3pdZqpoIDVKZEJsggrvg="
+
+# EUROPA_CONSUMER_DEVICEID_FILTER="rahul-sim-sandbox"
+
+# EVH_EUROPA_TELEMETRY_CONSUMER_GROUP="rahul-dev"
+# EVH_EUROPA_CONNECTIVITY_CONSUMER_GROUP="rahul-dev"
+# EVH_EUROPA_TWINCHANGES_CONSUMER_GROUP="rahul-dev"
+# EVH_EUROPA_CONSUMER_GROUP="rahul-dev"
+
+# EVH_EUROPA_CONSUMER_MAX_BATCH_SIZE="25"
+# EVH_EUROPA_CONSUMER_MAX_WAIT_TIME_SECONDS="1"
+
+# EVH_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=saasgapp5371ncus01240c;AccountKey=JxiRJHH4jxqIW+RkApjMr5VEtI3n2cEsooVVy3F+J0oclpE7duIPlSgXDnt40WcrTw7xk/qJ/QDN+AStQZBHkg==;EndpointSuffix=core.windows.net"
+# EVH_STORAGE_CONTAINER_NAME="event-hub-checkpoints"
+
+###################################################
+#    Redis
+###################################################
+REDIS_HOST="localhost"
+REDIS_PORT="6379"
+
+###################################################
+#    Mqtt
+###################################################
+MQTT_ENABLED="false"
+MQTT_HOST="mqtt"
+MQTT_PORT="1883"
+MQTT_VERSION="5"
+MQTT_BASE_URL="mqtt://localhost:1883"
+
+###################################################
+#    Apigee
+###################################################
+APIGEE_API_KEY="qjNMKJaDRTds6Ji1Q07zxJxkv3P3IaOw"
+APIGEE_BASE_URL="https://brunswick-dev.apigee.net/"
+TIMEZONE_APIGEE_BASE_URL="https://brunswick-dev.apigee.net/empower/management/v1/timezones"
+
+###################################################
+#    Brands
+###################################################
+NAVICO_BRAND_CODE="NG"
+NAVICO_APPLICATION_ID="b4e7ba76-817c-4718-b884-ff9dd5565026"
+
+###################################################
+#    Firebase
+###################################################
+FIREBASE_ENABLED="false"
+FIREBASE_CLIENT_EMAIL="UPDATE_ME"
+FIREBASE_PRIVATE_KEY="UPDATE_ME"
+FIREBASE_PROJECT_ID="UPDATE_ME"
+FIREBASE_DATABASE_URL="UPDATE_ME"
+
+###################################################
+#    Data Export
+###################################################
+DATA_EXPORT_ENABLED="false"
+DATA_EXPORT_EVENT_GRID_ENDPOINT="UPDATE_ME"
+DATA_EXPORT_EVENT_GRID_ACCESS_KEY="UPDATE_ME"
+DATA_EXPORT_EVENT_GRID_TOPIC_TELEMETRY="connect1-telemetry"
+
+###################################################
+#    Firebase
+###################################################
+FIREBASE_ENABLED="false"
+FIREBASE_CLIENT_EMAIL="UPDATE_ME"
+FIREBASE_PRIVATE_KEY="UPDATE_ME"
+FIREBASE_PROJECT_ID="UPDATE_ME"
+FIREBASE_DATABASE_URL="UPDATE_ME"
+
+###################################################
+#    CSI Secrets
+###################################################
+SECRETS_PATH="UPDATE_ME"
+SECRETS_PATH_IOT="UPDATE_ME"
+
+###################################################
+#    Connect1
+###################################################
+EUROPA_LOCAL_CREDENTIALS_ENABLED="false"
+SECRETS_PATH="./secrets"
+SECRETS_PATH_IOT="./secrets"
+
+###################################################
+#    CRM
+###################################################
