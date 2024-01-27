@@ -50,7 +50,26 @@
   - Complete set up and open the app, you will see a screen with `New Connection` in the middle.
     <br/>
     <br/>
-    ![docker screen 1](./ESCImages/docker1.png)
+    ![docker screen 1](./ESCImages/ConnectMongo.png)
     <br/>
     <br/>
-  - Connect to a MongoDB deployment 
+  - Connect to a MongoDB deployment by entering the following string as the URI:
+    ```
+    mongodb://root:password@localhost:27017/?authMechanism=DEFAULT&authSource=admin
+    ```
+  - Click `Connect`
+
+## 8. Install dependencies and start coding:
+  - Open `empower-service-core` you cloned earlier on VSC.
+  - Create a folder in the outermost directory (same directory as the `Dockerfile` and `package.json`) and call it `secrets`. Leave it empty.
+  - Create a `.env` file in the same directory. Then, copy the contents of the `esc2env.txt` file (found here) and paste them into the newly created `.env` file.
+  - Run the command:
+    ```
+    yarn install
+    ```
+  - On the left menu in VSC, click on the `Run and Debug` option. Then click on the green play button (Start Debugging).
+  - Lastly, inside a browser of your choice, naviagte to:
+    ```
+    http://localhost:8123/documentation#/
+    ```
+    If everything was sucessful, you should see the core services for the Empower ecosystem.
