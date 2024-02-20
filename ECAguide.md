@@ -288,6 +288,21 @@ and provide your personal access token when requested. The personal access token
     npx react-native run-ios
 
   #### Error:
+  If your npx react-native run-ios fails with this error when building
+  ```
+The following build commands failed:
+        PhaseScriptExecution Start\ Packager /Users/stevenrentas/Library/Developer/Xcode/DerivedData/CoreApp-cecazlvviewallelvcwemxcuxpyw/Build/Intermediates.noindex/CoreApp.build/Debug-iphonesimulator/CoreApp.build/Script-FD10A7F022414F080027D42C.sh (in target 'CoreApp' from project 'CoreApp')
+(1 failure)
+
+  ```
+  #### Fix:
+  Navigate to XCode -> CoreApp Target -> Build Phases
+  1) Click on the trash icon next to the phase titled "Start Packager"
+  2) Run the command: `npx react-native run-ios`
+  3) Using the git version control utility on VSC, undo the deletion by reverting the respective lines in `project.pbxproj`
+  4) Run the command: `npx react-native run-ios`
+
+  #### Error:
   If your login fails with an API error or something as shown below:
   ```
   [CodePush] Network request failed
@@ -298,6 +313,7 @@ and provide your personal access token when requested. The personal access token
   ```
   #### Fix:
   Try turning off `GlobalProtect` and `ZScaler` to fix it.
+  
   
  
        
