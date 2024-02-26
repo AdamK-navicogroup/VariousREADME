@@ -277,7 +277,7 @@ and provide your personal access token when requested. The personal access token
   2. Inside the Pods `xcodeproj`, add `arm64` to the `Excluded Architectures`
      ![plot](./ECAImages/PodArm64.png)
   3. Once done, re-run the commands below
-    ```
+
     yarn
 
     cd ios
