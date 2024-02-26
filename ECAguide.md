@@ -266,6 +266,7 @@ and provide your personal access token when requested. The personal access token
    ```
    npx react-native run-ios
    ```
+2. You may also run the app via `XCode`
 ### Troubleshooting
 
   #### Error:
