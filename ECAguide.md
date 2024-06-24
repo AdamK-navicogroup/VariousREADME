@@ -271,16 +271,23 @@ and provide your personal access token when requested. The personal access token
 
      #### Fix:
      Execute the command `docker login crasgsharednneu01.azurecr.io`
+     
      Request for the login credentials from Tony
-  5. If successful, there should be a new docker container running labeled **simulator**
-  6. You can now access the Europa Simulator at **http://localhost:9080**
-  7. Upload a Configuration
+  6. If successful, there should be a new docker container running labeled **simulator**
+  7. You can now access the Europa Simulator at **http://localhost:9080**
+  8. Upload a Configuration
      a. Click on the **settings** icon on the top right corner
+     
      b. Select **Upload Configuration**
+     
      c. Select **Choose file**
+     
      d. Navigate to the empower-resources repo you cloned earlier
+     
      c. Select **europa -> config -> test-bench-qa -> test-bench-qa.zcf**
+     
          ![plot](./ECAImages/Europa.png)
+
 
 ## Congratulations! You are all set up!
 
