@@ -17,16 +17,18 @@ POLICY_AGENT_PATH="/v1/data/empower/iot/api/authz"
 
 ###################################################
 #    Database Connection Strings
-###################################################
-TRIPS_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/trips?authSource=admin"
+# ###################################################
+# TRIPS_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/trips?authSource=admin"
 
-IOT_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/iot?authSource=admin"
+# IOT_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/iot?authSource=admin"
 
-USER_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/iot?authSource=admin"
+# USER_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/iot?authSource=admin"
 
-FACTORY_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/factory?authSource=admin"
+# FACTORY_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/factory?authSource=admin"
 
-CRM_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/crm?authSource=admin"
+# CRM_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/crm?authSource=admin"
+
+# GEO_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/geo?authSource=admin"
 
 ###################################################
 #    Database Connection Strings DEV
@@ -41,18 +43,22 @@ CRM_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/crm?authSource
 
 # CRM_DB_CONNECTION_STRING="mongodb+srv://dev-empower-service-crm:lhQHTmJKmjiVMRFj@dev.lxinj.mongodb.net/empower-crm"
 
+# GEO_DB_CONNECTION_STRING="mongodb://root:password@localhost:27017/geo?authSource=admin"
+
 ###################################################
 #    Database Connection Strings QA
 ###################################################
-# IOT_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service:Pxyo2yMuvrikHWDJ@empower-qa.lxinj.mongodb.net/empower-iot?retryWrites=true&w=majority"
+IOT_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service:Pxyo2yMuvrikHWDJ@empower-qa.lxinj.mongodb.net/empower-iot?retryWrites=true&w=majority"
 
-# FACTORY_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service-factory:Xptkv05nLveciJCM@empower-qa.lxinj.mongodb.net/empower-factory?retryWrites=true&w=majority"
+FACTORY_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service-factory:Xptkv05nLveciJCM@empower-qa.lxinj.mongodb.net/empower-factory?retryWrites=true&w=majority"
 
-# USER_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service:Pxyo2yMuvrikHWDJ@empower-qa.lxinj.mongodb.net/empower-iot?retryWrites=true&w=majority"
+USER_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service:Pxyo2yMuvrikHWDJ@empower-qa.lxinj.mongodb.net/empower-iot?retryWrites=true&w=majority"
 
-# TRIPS_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service-trips:85W2WItvEv6wPJbY@qa.lxinj.gcp.mongodb.net/engage?retryWrites=true&w=majority"
+TRIPS_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service-trips:85W2WItvEv6wPJbY@qa.lxinj.gcp.mongodb.net/engage?retryWrites=true&w=majority"
 
-# CRM_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service-crm:CSt8JnOvqjkWt2fX@empower-qa.lxinj.mongodb.net/empower-crm?retryWrites=true&w=majority"
+CRM_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service-crm:CSt8JnOvqjkWt2fX@empower-qa.lxinj.mongodb.net/empower-crm?retryWrites=true&w=majority"
+
+GEO_DB_CONNECTION_STRING="mongodb+srv://qa-empower-service-geo:FRYHUqUir0cJlOIr@empower-qa.lxinj.mongodb.net/empower-geo?retryWrites=true&w=majority"
 
 ###################################################
 #    OpenTelemetry
@@ -64,36 +70,24 @@ TELEMETRY_APP_NAME="empower-service-core"
 ###################################################
 #    IOT Hub
 ###################################################
-IOT_HUB_CONNECTION_STRING=HostName=IOT-ASG-APP5371-N-CUS01.azure-devices.net;SharedAccessKeyName=empower-service;SharedAccessKey=OZ7XJorE2MFt0FHqbq8zpUfV4AHu1Op0sBJakK1qMBU=
+# IOT_HUB_CONNECTION_STRING="HostName=IOT-ASG-APP5371-N-CUS01.azure-devices.net;SharedAccessKeyName=empower-service;SharedAccessKey=OZ7XJorE2MFt0FHqbq8zpUfV4AHu1Op0sBJakK1qMBU="
+
+###################################################
+#    IOT Hub DEV
+###################################################
+# IOT_HUB_CONNECTION_STRING="HostName=IOT-ASG-APP5768-N-CUS01.azure-devices.net;SharedAccessKeyName=empower-service;SharedAccessKey=lMW67HRGlhV8tQ2FC9hUhvzwEuHybXffNWwI0xJY5Ww="
+
 
 ###################################################
 #    IOT Hub QA
 ###################################################
-# IOT_HUB_CONNECTION_STRING=HostName=IOT-ASG-APP5767-N-CUS01.azure-devices.net;SharedAccessKeyName=empower-service;SharedAccessKey=8zO0sfQuQivCrg6dUV0Cos11w3Jfqe53CNKFAmtGOtI=
+IOT_HUB_CONNECTION_STRING="HostName=IOT-ASG-APP5767-N-CUS01.azure-devices.net;SharedAccessKeyName=empower-service;SharedAccessKey=8zO0sfQuQivCrg6dUV0Cos11w3Jfqe53CNKFAmtGOtI="
 
 
 ###################################################
 #    EventHub Consumers
 ###################################################
-EVH_CONNECTION_STRING="Endpoint=sb://ehns-asg-app5371-n-cus01.servicebus.windows.net/;SharedAccessKeyName=empowerListen;SharedAccessKey=H0f4shIXQdCSGK09OrYDZvjKOCXpyDXOt1LgHgzMksk="
-
-EUROPA_CONSUMER_DEVICEID_FILTER="rahul-sim-sandbox"
-
-EVH_EUROPA_TELEMETRY_CONSUMER_GROUP="rahul-dev"
-EVH_EUROPA_CONNECTIVITY_CONSUMER_GROUP="rahul-dev"
-EVH_EUROPA_TWINCHANGES_CONSUMER_GROUP="rahul-dev"
-EVH_EUROPA_CONSUMER_GROUP="rahul-dev"
-
-EVH_EUROPA_CONSUMER_MAX_BATCH_SIZE="25"
-EVH_EUROPA_CONSUMER_MAX_WAIT_TIME_SECONDS="1"
-
-EVH_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=saasgapp5371ncus01240c;AccountKey=JxiRJHH4jxqIW+RkApjMr5VEtI3n2cEsooVVy3F+J0oclpE7duIPlSgXDnt40WcrTw7xk/qJ/QDN+AStQZBHkg==;EndpointSuffix=core.windows.net"
-EVH_STORAGE_CONTAINER_NAME="event-hub-checkpoints"
-
-###################################################
-#    EventHub Consumers QA
-###################################################
-# EVH_CONNECTION_STRING="Endpoint=sb://ehns-asg-app5767-n-cus01.servicebus.windows.net/;SharedAccessKeyName=empowerListen;SharedAccessKey=/MTUeYo5iGvqTD52AKjjAcM3pdZqpoIDVKZEJsggrvg="
+# EVH_CONNECTION_STRING="Endpoint=sb://ehns-asg-app5371-n-cus01.servicebus.windows.net/;SharedAccessKeyName=empowerListen;SharedAccessKey=H0f4shIXQdCSGK09OrYDZvjKOCXpyDXOt1LgHgzMksk="
 
 # EUROPA_CONSUMER_DEVICEID_FILTER="rahul-sim-sandbox"
 
@@ -109,6 +103,42 @@ EVH_STORAGE_CONTAINER_NAME="event-hub-checkpoints"
 # EVH_STORAGE_CONTAINER_NAME="event-hub-checkpoints"
 
 ###################################################
+#    EventHub Consumers DEV
+###################################################
+# EVH_CONNECTION_STRING="Endpoint=sb://ehns-asg-app5768-n-cus01.servicebus.windows.net/;SharedAccessKeyName=empowerListen;SharedAccessKey=X/pDXW5/OkSd2LssEG3LM5+JvpvYlHhpCezyQIyfQyo="
+
+# # EUROPA_CONSUMER_DEVICEID_FILTER="rahul-simulator-dev"
+# EVH_EUROPA_TELEMETRY_CONSUMER_GROUP="empower-service-iot-telemetry"
+# EVH_EUROPA_CONNECTIVITY_CONSUMER_GROUP="empower-service-iot-connectivity"
+# EVH_EUROPA_TWINCHANGES_CONSUMER_GROUP="empower-service-iot-twin-changes"
+# EVH_EUROPA_CONSUMER_GROUP="empower"
+# EVH_EUROPA_CONSUMER_ENABLED=true
+
+# EVH_EUROPA_CONSUMER_MAX_BATCH_SIZE="25"
+# EVH_EUROPA_CONSUMER_MAX_WAIT_TIME_SECONDS="1"
+
+# EVH_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=saasgapp5768ncus012fcb;AccountKey=TUj0xZVrPvArgNYQtMxOM1nPEoxqF6cVbesWoswjhP64S4eLhALazEkwBgHA2N2Rv75IEtjLlnRm+AStOIO55w==;EndpointSuffix=core.windows.net"
+# EVH_STORAGE_CONTAINER_NAME="event-hub-checkpoints"
+
+
+###################################################
+#    EventHub Consumers QA
+###################################################
+EVH_CONNECTION_STRING="Endpoint=sb://ehns-asg-app5767-n-cus01.servicebus.windows.net/;SharedAccessKeyName=empowerListen;SharedAccessKey=/MTUeYo5iGvqTD52AKjjAcM3pdZqpoIDVKZEJsggrvg="
+EUROPA_CONSUMER_DEVICEID_FILTER="OEM_Portal_Anusha"
+EVH_EUROPA_TELEMETRY_CONSUMER_GROUP="empower-service-iot-telemetry"
+EVH_EUROPA_CONNECTIVITY_CONSUMER_GROUP="empower-service-iot-connectivity"
+EVH_EUROPA_TWINCHANGES_CONSUMER_GROUP="empower-service-iot-twin-changes"
+EVH_EUROPA_CONSUMER_GROUP="empower-service-iot-telemetry"
+EVH_EUROPA_CONSUMER_ENABLED=true
+
+EVH_EUROPA_CONSUMER_MAX_BATCH_SIZE="25"
+EVH_EUROPA_CONSUMER_MAX_WAIT_TIME_SECONDS="1"
+
+EVH_STORAGE_CONNECTION_STRING="DefaultEndpointsProtocol=https;AccountName=saasgapp5767ncus01d45c;AccountKey=CadR6T++NMCBmRHJ4o0ZV0+MMzm+OtGtggqTiSq/jWYr61DkAPdrKi3WOWwqIOqbw4kqT+i69o2tOEkDxs/grA==;EndpointSuffix=core.windows.net"
+EVH_STORAGE_CONTAINER_NAME="event-hub-checkpoints"
+
+###################################################
 #    Redis
 ###################################################
 REDIS_HOST="localhost"
@@ -117,11 +147,30 @@ REDIS_PORT="6379"
 ###################################################
 #    Mqtt
 ###################################################
+# MQTT_ENABLED="true"
+# MQTT_HOST="mqtt"
+# MQTT_PORT="1883"
+# MQTT_VERSION="5"
+# MQTT_BASE_URL="mqtt://localhost:1883"
+# MQTT_API_BASE_URL="http://localhost:18083"
+
+###################################################
+#    Mqtt DEV
+###################################################
+# MQTT_ENABLED="false"
+# MQTT_HOST="empower-service-mqtt-broker-headless"
+# MQTT_PORT="1883"
+# MQTT_VERSION="5"
+# MQTT_BASE_URL="mqtt://empower-service-mqtt-broker-headless:1883"
+# MQTT_API_BASE_URL="http://empower-service-mqtt-broker-headless:18083"
+
+###################################################
+#    Mqtt QA
+###################################################
 MQTT_ENABLED="false"
-MQTT_HOST="mqtt"
-MQTT_PORT="1883"
-MQTT_VERSION="5"
-MQTT_BASE_URL="mqtt://localhost:1883"
+MQTT_USERNAME="svc-empower"
+MQTT_PASSWORD="7Kln+R4mRTrUSInCG04jw381fyO4JBLjTJO22qZWD18W2/dRBNtu3qgldRylViBKeZ21BiK3airWnxpOgbVc7m9WmbKGuxbaMUq+nXJv+2f+imLpl/Ntke4Ub/moTDqzQq6GbA+OCD/3YzMPEngocYjp9Tr6DCffwgU36zhLzRo="
+MQTT_BASE_URL="mqtt://empower-service-mqtt-broker-headless:1883"
 
 ###################################################
 #    Apigee
@@ -137,13 +186,10 @@ NAVICO_BRAND_CODE="NG"
 NAVICO_APPLICATION_ID="b4e7ba76-817c-4718-b884-ff9dd5565026"
 
 ###################################################
-#    Firebase
+#    Brands QA
 ###################################################
-FIREBASE_ENABLED="false"
-FIREBASE_CLIENT_EMAIL="UPDATE_ME"
-FIREBASE_PRIVATE_KEY="UPDATE_ME"
-FIREBASE_PROJECT_ID="UPDATE_ME"
-FIREBASE_DATABASE_URL="UPDATE_ME"
+NAVICO_BRAND_CODE="NG"
+NAVICO_APPLICATION_ID="196bb841-4502-42c8-bf57-afd27a6f60db"
 
 ###################################################
 #    Data Export
@@ -163,17 +209,51 @@ FIREBASE_PROJECT_ID="UPDATE_ME"
 FIREBASE_DATABASE_URL="UPDATE_ME"
 
 ###################################################
+#    Firebase QA
+###################################################
+FIREBASE_ENABLED="true"
+FIREBASE_CLIENT_EMAIL="firebase-adminsdk-htkx1@back-end-non-prod.iam.gserviceaccount.com"
+FIREBASE_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDmpqT7eLOLp8pm
+A6qpDKhBKJSK/o9Mkay0Lr/m65sMRlQmcDaMDgVm+t6ERPsXjlIkyLIsGcZ9P3Tr
+mHgBXES5NSfU8m+/ujM0ZOO/fDw2jxA9nDfnlfc/5GNwnQp6A++iPCqwF1qMX+0D
+FlxlSl2O17fXD+b/A67pX7wniP0k7Wc4Kb3yqSQKEZ6DJL5boyXbyEcoRl09xdNM
+OFgZ6SwCt9xawDs1qrASAVyBvGcb2lkW139FA1UbDx9UhHTFig2Jm5MjO9LXtCbB
+gugTr8LKoBGKF1xtSPfAWKLZ2wsT2wWYAKp/TBv6MeoNLj0OMHqjCQUV95hJgsDO
+AKcnHFxBAgMBAAECggEAEB357laPWUVmx70e2kQ3p6Hxy0qhcczGICsaHsU85t0t
+OShjL2M1bm4+SUjWsN0xkT9y79D3RT4/ac0UKagsZzK3L1Kni2Kz/EfGgFVqkbdq
+f5ugbm7UwaKwbiiTGFaZEqGYrAhdu+xiD/KqjytkoTwirQT/87bqrIUTjUGtyrwo
+GuujFSb4Wq+8uWgsiqfOCPy1SWVGUP8g8TFecbpoS5rqgJFbhWsPC3CydgJaQl+c
+AblwJQxhAV2yJxktQLvtwy3Vh3YojVsZXerb2UAy58hKu9juHllABI4M/OEnu3aP
++q6LNJwhzINMCiKeFM47nlpGteZGjUXABRACHsbOpwKBgQD9Dxlq7w8P7woFIyxz
+N9IrlB6wr+C5uHzCh+6GMC7JqRvun2dGpDYC52xcxKECWz8oBXB5ujt3BppU1cyt
+RbKLQjnct+T4AyF2cYrPzz2ahfNarSPyjWzWCFI2tuC4iAbNLfyc15Pjeax+TqET
+CAXwmUmR7oMAwGgYQzXaD2Vs8wKBgQDpVOB4+5rjhMMKifxD8CwO5CUApiYYVtWh
++vhrhjtnL07VsfbCfj/LvpE0BdhTL80eRDhEfNwoG4Q3/TtoP6EIhRA5jBZClRav
+647KMfCgENfXXKXvr8OgX8fzSCwRf5kbo6YW7RoqNg4nC6FqkQHnOIPiKg49R70X
+WViOfsXO+wKBgQCYx9fxrpjqZsgm5+B7Q3VZKBkLVXQYzKBOFiFU1Jw61iVuAMEq
+bhPJ1wyeSXxn3s0XjYklhOFH8C2XEGl9JzovR3GFp2TOs50tVEmZQyaPN1YAJc4x
+L19JLUbtj6XG4yEwGRaNXr4DtT8GFtS6l7p2UyWOvHBNMNzn4RQPLgJvLwKBgC34
+ewFbEPkifwrkhL8d4pBMgr3N/lNtSEnRmIAWwj1iJLYVifhnx0ntEc6eGDDLii4c
+YrmboASG51XgnoO7hY6YKMotv3T+yql+T3OmwzHGH8BekJLYnkJKnKph3czUxuWb
+KG376NvIKqGmuPa1+xoDGHjGsGeCas7e24O3lmFhAoGBAMgd0A2/ClvEZWjYFjuA
+2Ph5E+OfN2QApeeEWj8dd41Gv7t1BB0GrKjRTx7a8SClc71k2WtPOYM6p9keHDqx
+bku7fXxtKaqu60gcSjmxuTXU8+D7v7g8zLtWLObfxwhX33wnJuiJhA8xDV3Kcw8l
+SskSB1udmAM+D7rzswOG1gl6
+-----END PRIVATE KEY-----"
+FIREBASE_PROJECT_ID="back-end-non-prod"
+FIREBASE_DATABASE_URL="https://back-end-non-prod.firebaseio.com"
+
+###################################################
 #    CSI Secrets
 ###################################################
-SECRETS_PATH="UPDATE_ME"
-SECRETS_PATH_IOT="UPDATE_ME"
+SECRETS_PATH="./secrets"
+SECRETS_PATH_IOT="./secrets"
 
 ###################################################
 #    Connect1
 ###################################################
 EUROPA_LOCAL_CREDENTIALS_ENABLED="false"
-SECRETS_PATH="./secrets"
-SECRETS_PATH_IOT="./secrets"
 
 ###################################################
 #    CRM
