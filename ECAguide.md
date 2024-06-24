@@ -267,6 +267,15 @@ and provide your personal access token when requested. The personal access token
    npx react-native run-ios
    ```
 2. You may also run the app via `XCode`
+3. If you are on M1 or M2 chip, then you will need to run on a **Rosetta** simulator.
+   #### Rosetta Simulator
+   1. **Product -> Destination -> Show All Run Destinations**
+      ![plot](./ECAImages/Rosetta1.png)
+   3. Select a **Rosetta** Simulator
+      ![plot](./ECAImages/Rosetta2.png)
+   
+   
+   
 ### Troubleshooting
 
   #### Error:
