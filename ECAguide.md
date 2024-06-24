@@ -401,18 +401,23 @@ The following build commands failed:
   #### Fix:
   Try turning off `GlobalProtect` and `ZScaler` to fix it.
   
-  
- 
-       
- 
 
+## Android Set up
+  ** Under maintenance**
+  1. Install **Android Studio:** https://developer.android.com/studio
+  2. Download JRE: https://www.java.com/en/download/
+  3. Install jdk 17 `brew install --cask zulu17`
+  4. Run the commands:
+     ```
+     brew install --cask android-sdk
+     
+     brew install --cask android-platform-tools
+     ```
+  5. Open Android Studio and build gradle
+  6. Run `yarn android`
 
   
   
   
       
-    
-    
-  
-  
     
