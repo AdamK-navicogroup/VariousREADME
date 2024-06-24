@@ -414,7 +414,8 @@ The following build commands failed:
      brew install --cask android-platform-tools
      ```
   5. Open Android Studio and build gradle
-  6. Run `yarn android`
+  6. Check that the jdk version is set to 17, if not, set it to 17
+  7. Run `yarn android`
 
   
   
