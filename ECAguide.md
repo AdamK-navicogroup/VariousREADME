@@ -259,12 +259,60 @@ and provide your personal access token when requested. The personal access token
 
 ## ThingsBoard Set up
    ** Under maintenance**
+   1. **Clone the repo:** https://github.com/NavicoGroup/empower-n2k-client
+   2. Open on VSC and open a new terminal session
+   3. Execute the following block in the terminal
+      ```
+      python3 -m venv .venv
+
+      source .venv/bin/activate
+
+      .venv/bin/python3 -m pip install --upgrade pip
+
+      pip install setuptools wheel
+
+      .venv/bin/python setup.py sdist bdist_wheel
+      ```
+   4. Inside your **Desktop** folder, create a yaml file named **docker-compose**
+   5. Add the following content to it
+      ```
+      version: "3.0"
+      services:
+      mytb:
+        restart: always
+        image: "thingsboard/tb-postgres"
+        ports:
+            - "8080:9090"
+            - "1883:1883"
+            - "7070:7070"
+            - "5683-5688:5683-5688/udp"
+        environment:
+            TB_QUEUE_TYPE: in-memory
+        volumes:
+            - /Users/<username>/mytb-data:/data
+            - /Users/<username>/mytb-logs:/var/log/thingsboard
+      ```
+   6. Open a new terminal and navigate to **Desktop**: `cd Desktop`
+   7. Execute the following
+      ```
+      mkdir -p ~/.mytb-data && sudo chown -R 799:799 ~/.mytb-data
+      
+      mkdir -p ~/.mytb-logs && sudo chown -R 799:799 ~/.mytb-logs
+      
+      docker compose up --build -d
+      ```
+   8. **Clone the repo:** https://github.com/NavicoGroup/empower-thingsboard-client
+   9. Open on VSC and open a new terminal session
+   10. Execute the command `python3 -m venv .venv`
+   11. Execute the command `pip3 install -r client/requirements.txt`
+   12. Contact Rahul or Adam to complete set-up
 
 ## Europa Simulator (recommended)
   1. **Clone the repo:** https://github.com/NavicoGroup/empower-resources
   2. Open on VSC and open a new terminal session
   3. Navigate to the simulator directory: **cd europa -> cd simulator**
-  4. Execute the command `docker compose up --build -d`
+  4. Execute the command `pip3 install iotedgedev`
+  5. Execute the command `docker compose up --build -d`
      #### Error:
      EuropaSimulator Error Head "https://crasgsharednneu01.azurecr.i...
      UNAUTHORIZED
