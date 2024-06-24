@@ -257,6 +257,30 @@ and provide your personal access token when requested. The personal access token
   5. NOTE: Even if you're seeing Command Line Tools dropdown being selected with proper version, you might want to re-select it again.
   6. To know if successful, the light text underneath the Command Line Tools dropdown should say `/Applications/Xcode.app`
 
+## ThingsBoard Set up
+   ** Under maintenance**
+
+## Europa Simulator (recommended)
+  1. **Clone the repo:** https://github.com/NavicoGroup/empower-resources
+  2. Open on VSC and open a new terminal session
+  3. Navigate to the simulator directory: **cd europa -> cd simulator**
+  4. Execute the command `docker compose up --build -d`
+     #### Error:
+     EuropaSimulator Error Head "https://crasgsharednneu01.azurecr.i...
+     UNAUTHORIZED
+
+     #### Fix:
+     Execute the command `docker login crasgsharednneu01.azurecr.io`
+     Request for the login credentials from Tony
+  5. If successful, there should be a new docker container running labeled **simulator**
+  6. You can now access the Europa Simulator at **http://localhost:9080**
+  7. Upload a Configuration
+     a. Click on the **settings** icon on the top right corner
+     b. Select **Upload Configuration**
+     c. Select **Choose file**
+     d. Navigate to the empower-resources repo you cloned earlier
+     c. Select **europa -> config -> test-bench-qa -> test-bench-qa.zcf**
+         ![plot](./ECAImages/Europa.png)
 
 ## Congratulations! You are all set up!
 
