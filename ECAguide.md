@@ -285,9 +285,7 @@ and provide your personal access token when requested. The personal access token
      d. Navigate to the empower-resources repo you cloned earlier
      
      c. Select **europa -> config -> test-bench-qa -> test-bench-qa.zcf**
-     
          ![plot](./ECAImages/Europa.png)
-
 
 ## Congratulations! You are all set up!
 
